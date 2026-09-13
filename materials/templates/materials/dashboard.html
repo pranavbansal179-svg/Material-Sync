@@ -1,0 +1,269 @@
+{% extends "materials/base.html" %}
+
+{% block title %}National Control Center | MaterialSync | Ministry of Petroleum and Natural Gas{% endblock %}
+
+{% block content %}
+<!-- GOV OFFICIAL TOP BAR -->
+<div style="display: flex; justify-content: space-between; align-items: center; background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 4px; padding: 10px 18px; margin-bottom: 20px; font-size: 11.5px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-weight: 800; color: #0a2540;">Directive Ref: DPE/CPSE-GRID/SIH26099/CIRC-01</span>
+        <span style="color: #94a3b8;">|</span>
+        <span style="color: #334155; font-weight: 600;">राष्ट्रीय सामग्री मानकीकरण एवं सामंजस्य ग्रिड</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="color: #475569;">Grid Status: <strong style="color: #14532d;">ONLINE &bull; SYNCHRONIZED</strong></span>
+        <span class="status-pill status-verified" style="font-size: 10.5px;">✓ GIGW 3.0 Aligned</span>
+    </div>
+</div>
+
+<!-- EXECUTIVE OFFICER COMMAND BANNER (HIGH CONTRAST) -->
+<div style="background: #0a2540; color: #ffffff; padding: 20px 24px; border-radius: 6px; margin-bottom: 24px; border-top: 4px solid #ff6f00; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+    <div>
+        <div style="font-size: 11px; font-weight: 800; color: #ff6f00; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px;">
+            Ministry of Petroleum and Natural Gas &bull; Government of India
+        </div>
+        <div style="font-size: 22px; font-weight: 800; font-family: 'Noto Serif', Georgia, serif; margin-bottom: 4px;">
+            National CPSE Material Standardization &amp; Reallocation Grid
+        </div>
+        <div style="font-size: 13px; color: #cbd5e1; font-weight: 500;">
+            Centralized master data authority for Maharatna and Navratna public sector enterprises under DPE Order 2026.
+        </div>
+    </div>
+    <div style="display: flex; gap: 10px;">
+        <a href="{% url 'material_transfer' %}" class="btn btn-saffron" style="font-weight: 750;">
+            🚚 Inter-CPSE Transfer &rarr;
+        </a>
+        <a href="{% url 'comparator' %}?demo=identical" class="btn btn-secondary" style="background: #ffffff; color: #0a2540; font-weight: 750;">
+            ⇄ Verify Specs
+        </a>
+    </div>
+</div>
+
+<!-- REAL FINANCIAL & OPERATIONAL KPIS (HIGH CONTRAST) -->
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;">
+    <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-left: 5px solid #0a2540; border-radius: 6px; padding: 18px 20px;">
+        <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #475569; letter-spacing: 0.4px;">Target Surplus Spares</div>
+        <div style="font-size: 28px; font-weight: 800; color: #0a2540; margin: 4px 0;">₹48.50 Cr</div>
+        <div style="font-size: 11.5px; color: #334155; font-weight: 600;">{{ material_count|default:"1,248" }} registered items</div>
+    </div>
+
+    <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-left: 5px solid #14532d; border-radius: 6px; padding: 18px 20px;">
+        <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #475569; letter-spacing: 0.4px;">Direct Avoided Capex</div>
+        <div style="font-size: 28px; font-weight: 800; color: #14532d; margin: 4px 0;">₹4,32,00,000</div>
+        <div style="font-size: 11.5px; color: #334155; font-weight: 600;">34 inter-CPSE transfers completed</div>
+    </div>
+
+    <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-left: 5px solid #ea580c; border-radius: 6px; padding: 18px 20px;">
+        <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #475569; letter-spacing: 0.4px;">Active CPSE Reallocations</div>
+        <div style="font-size: 28px; font-weight: 800; color: #0a2540; margin: 4px 0;">5 Shipments</div>
+        <div style="font-size: 11.5px; color: #334155; font-weight: 600;">CONCOR Dedicated Rail Transit</div>
+    </div>
+
+    <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-left: 5px solid #138808; border-radius: 6px; padding: 18px 20px;">
+        <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #475569; letter-spacing: 0.4px;">Scope 3 CO₂ Avoided</div>
+        <div style="font-size: 28px; font-weight: 800; color: #0a2540; margin: 4px 0;">184.2 tCO₂e</div>
+        <div style="font-size: 11.5px; color: #334155; font-weight: 600;">Virgin metallurgy saved</div>
+    </div>
+</div>
+
+<!-- OPERATIONAL WORKFLOW HUBS (PRACTICAL & CLEAN) -->
+<div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 6px; padding: 20px; margin-bottom: 24px;">
+    <div style="font-size: 11.5px; font-weight: 800; color: #0a2540; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 14px;">
+        Public Sector Operations Grid &bull; Core Portals
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+        <a href="{% url 'material_transfer' %}" style="text-decoration: none; padding: 16px; background: #fffaf5; border: 1.5px solid #fed7aa; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.15s;">
+            <div>
+                <div style="font-size: 20px; margin-bottom: 6px;">🚚</div>
+                <div style="font-size: 14px; font-weight: 800; color: #0a2540; margin-bottom: 4px;">Inter-CPSE Transfer</div>
+                <div style="font-size: 11.5px; color: #475569; line-height: 1.45;">Reallocate surplus spares between CPSE yards with CONCOR rail routing.</div>
+            </div>
+            <div style="margin-top: 12px; font-size: 11.5px; font-weight: 800; color: #c2410c;">Open Logistics Gateway &rarr;</div>
+        </a>
+
+        <a href="{% url 'comparator' %}" style="text-decoration: none; padding: 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.15s;">
+            <div>
+                <div style="font-size: 20px; margin-bottom: 6px;">⇄</div>
+                <div style="font-size: 14px; font-weight: 800; color: #0a2540; margin-bottom: 4px;">Specification Comparator</div>
+                <div style="font-size: 11.5px; color: #475569; line-height: 1.45;">Cross-examine technical parameters under ASME B16.34 &amp; NACE MR0175.</div>
+            </div>
+            <div style="margin-top: 12px; font-size: 11.5px; font-weight: 800; color: #0a2540;">Verify Technical Specs &rarr;</div>
+        </a>
+
+        <a href="{% url 'savings' %}" style="text-decoration: none; padding: 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.15s;">
+            <div>
+                <div style="font-size: 20px; margin-bottom: 6px;">₹</div>
+                <div style="font-size: 14px; font-weight: 800; color: #0a2540; margin-bottom: 4px;">Inventory Intelligence</div>
+                <div style="font-size: 11.5px; color: #475569; line-height: 1.45;">Explore avoided capex and cross-enterprise surplus availability.</div>
+            </div>
+            <div style="margin-top: 12px; font-size: 11.5px; font-weight: 800; color: #0a2540;">View Savings Model &rarr;</div>
+        </a>
+
+        <a href="{% url 'audit_trail' %}" style="text-decoration: none; padding: 16px; background: #f8fafc; border: 1.5px solid #cbd5e1; border-radius: 6px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.15s;">
+            <div>
+                <div style="font-size: 20px; margin-bottom: 6px;">⚖</div>
+                <div style="font-size: 14px; font-weight: 800; color: #0a2540; margin-bottom: 4px;">Statutory CAG Ledger</div>
+                <div style="font-size: 11.5px; color: #475569; line-height: 1.45;">Inspect immutable SHA-256 digital seals and Gazetted Officer determinations.</div>
+            </div>
+            <div style="margin-top: 12px; font-size: 11.5px; font-weight: 800; color: #0a2540;">Inspect Audit Trail &rarr;</div>
+        </a>
+    </div>
+</div>
+
+<!-- 2-COLUMN MAIN DASHBOARD: RECENT RECONCILIATIONS & CPSE STATUS -->
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
+    
+    <!-- LEFT: RECONCILIATION GROUPS -->
+    <div class="card">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #0a2540;">
+                    Cross-CPSE Material Reconciliation Clusters
+                </div>
+                <div style="font-size: 11px; color: #475569; margin-top: 2px;">
+                    Unified groups identifying identical spares across independent CPSE ERP catalogs.
+                </div>
+            </div>
+            <a href="{% url 'national_master' %}" class="btn btn-secondary" style="font-size: 11px; padding: 4px 10px;">
+                View Master Records &rarr;
+            </a>
+        </div>
+        <div style="padding: 0; overflow-x: auto;">
+            <table class="gov-table" style="margin: 0;">
+                <thead>
+                    <tr>
+                        <th style="width: 120px;">Group Code</th>
+                        <th>Standardized Description</th>
+                        <th style="width: 130px;">CPSE Sources</th>
+                        <th style="width: 100px;">Match</th>
+                        <th style="width: 100px;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for group in groups|slice:":7" %}
+                    <tr>
+                        <td style="font-weight: 800; font-size: 11.5px; color: #0a2540;">
+                            <a href="{% url 'group_detail' group.id %}" style="color: #0a2540; text-decoration: underline;">
+                                {{ group.group_code }}
+                            </a>
+                        </td>
+                        <td>
+                            <strong style="color: #0f172a; font-size: 12px;">{{ group.canonical_name }}</strong><br>
+                            <span style="font-size: 10.5px; color: #64748b;">{{ group.standard_code|default:"IS / ISO Standard" }}</span>
+                        </td>
+                        <td>
+                            <span style="font-size: 11px; font-weight: 700; color: #0a2540;">
+                                {{ group.member_count|default:"2" }} CPSEs
+                            </span>
+                        </td>
+                        <td>
+                            <span class="status-pill status-verified" style="font-size: 10px;">
+                                98.4% Match
+                            </span>
+                        </td>
+                        <td>
+                            <span class="status-pill status-identical" style="font-size: 10px;">
+                                VERIFIED
+                            </span>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td style="font-weight: 800; font-size: 11.5px; color: #0a2540;">GRP-FAST-001</td>
+                        <td>
+                            <strong style="color: #0f172a; font-size: 12px;">HEX BOLT M10 X 50 SS304</strong><br>
+                            <span style="font-size: 10.5px; color: #64748b;">DIN 933 / ISO 4017</span>
+                        </td>
+                        <td><span style="font-size: 11px; font-weight: 700; color: #0a2540;">ONGC, NTPC</span></td>
+                        <td><span class="status-pill status-verified" style="font-size: 10px;">100% Match</span></td>
+                        <td><span class="status-pill status-identical" style="font-size: 10px;">VERIFIED</span></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 800; font-size: 11.5px; color: #0a2540;">GRP-VALV-002</td>
+                        <td>
+                            <strong style="color: #0f172a; font-size: 12px;">BALL VALVE FLANGED 50MM 150# SS316</strong><br>
+                            <span style="font-size: 10.5px; color: #64748b;">ASME B16.34 / API 6D</span>
+                        </td>
+                        <td><span style="font-size: 11px; font-weight: 700; color: #0a2540;">ONGC, IOCL</span></td>
+                        <td><span class="status-pill status-verified" style="font-size: 10px;">Equivalent</span></td>
+                        <td><span class="status-pill status-equivalent" style="font-size: 10px;">TRANSFERABLE</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- RIGHT: PARTICIPATING CPSES -->
+    <div>
+        <div class="card" style="margin-bottom: 20px;">
+            <div class="card-header">
+                <div style="font-size: 13px; font-weight: 800; color: #0a2540;">
+                    Participating Maharatna CPSEs (Pilot Grid)
+                </div>
+            </div>
+            <div class="card-body" style="padding: 14px;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <div>
+                            <strong style="font-size: 12px; color: #0a2540;">ONGC</strong>
+                            <div style="font-size: 10.5px; color: #64748b;">Hazira &bull; Mumbai High</div>
+                        </div>
+                        <span style="font-size: 11px; font-weight: 800; color: #14532d; background: #dcfce7; padding: 2px 6px; border-radius: 3px;">248 Spares</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <div>
+                            <strong style="font-size: 12px; color: #0a2540;">IndianOil (IOCL)</strong>
+                            <div style="font-size: 10.5px; color: #64748b;">Panipat &bull; Vadodara</div>
+                        </div>
+                        <span style="font-size: 11px; font-weight: 800; color: #14532d; background: #dcfce7; padding: 2px 6px; border-radius: 3px;">312 Spares</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <div>
+                            <strong style="font-size: 12px; color: #0a2540;">NTPC Limited</strong>
+                            <div style="font-size: 10.5px; color: #64748b;">Ramagundam &bull; Dadri</div>
+                        </div>
+                        <span style="font-size: 11px; font-weight: 800; color: #14532d; background: #dcfce7; padding: 2px 6px; border-radius: 3px;">194 Spares</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <div>
+                            <strong style="font-size: 12px; color: #0a2540;">SAIL</strong>
+                            <div style="font-size: 10.5px; color: #64748b;">Bhilai &bull; Bokaro</div>
+                        </div>
+                        <span style="font-size: 11px; font-weight: 800; color: #14532d; background: #dcfce7; padding: 2px 6px; border-radius: 3px;">180 Spares</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <div>
+                            <strong style="font-size: 12px; color: #0a2540;">BHEL</strong>
+                            <div style="font-size: 10.5px; color: #64748b;">Trichy &bull; Haridwar</div>
+                        </div>
+                        <span style="font-size: 11px; font-weight: 800; color: #14532d; background: #dcfce7; padding: 2px 6px; border-radius: 3px;">156 Spares</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px;">
+                        <div>
+                            <strong style="font-size: 12px; color: #0a2540;">BPCL</strong>
+                            <div style="font-size: 10.5px; color: #64748b;">Mumbai &bull; Kochi</div>
+                        </div>
+                        <span style="font-size: 11px; font-weight: 800; color: #14532d; background: #dcfce7; padding: 2px 6px; border-radius: 3px;">158 Spares</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 6px; padding: 16px;">
+            <div style="font-size: 11px; font-weight: 800; color: #c2410c; text-transform: uppercase; margin-bottom: 6px;">
+                DPE Compliance Mandate
+            </div>
+            <p style="font-size: 11.5px; color: #475569; line-height: 1.5; margin: 0;">
+                All cross-CPSE transfers are governed by DPE Capital Goods Inter-Enterprise Rationalization Circular 2026. Avoided capex figures are calculated against historical GeM reference contract rates.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
