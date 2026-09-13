@@ -11,6 +11,204 @@
     <link rel="stylesheet" href="{% static 'materials/enterprise.css' %}">
     <link rel="stylesheet" href="{% static 'materials/reference-alignment.css' %}">
     <link rel="stylesheet" href="{% static 'materials/targeted-refinement.css' %}">
+
+    <style>
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+        }
+
+        /* TYPOGRAPHY EQUALIZATION WITH SUB-PAGES */
+        .public-shell {
+            font-size: 14.5px !important;
+            color: #1e293b !important;
+        }
+
+        .gov-top-accessibility-bar {
+            font-size: 11.5px !important;
+            padding: 6px 32px !important;
+        }
+
+        .institution-identity strong {
+            font-size: 15px !important;
+        }
+
+        .institution-identity .institution-hindi {
+            font-size: 13px !important;
+        }
+
+        .institution-identity small {
+            font-size: 11.5px !important;
+        }
+
+        .public-nav-container {
+            overflow: visible !important;
+            max-width: 100vw !important;
+        }
+
+        .public-nav {
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        .public-nav-links a {
+            font-size: 13.5px !important;
+            font-weight: 600 !important;
+        }
+
+        .public-nav .nav-workspace {
+            font-size: 13px !important;
+            font-weight: 750 !important;
+        }
+
+        .nav-global-search {
+            max-width: 220px !important;
+            min-width: 140px !important;
+            flex: 0 1 200px !important;
+            flex-shrink: 0 !important;
+        }
+
+        .hero-editorial h1 {
+            font-size: clamp(2.3rem, 3.4vw, 3.2rem) !important;
+            line-height: 1.18 !important;
+            font-weight: 800 !important;
+            font-family: 'Noto Serif', Georgia, serif !important;
+            color: #0a2540 !important;
+        }
+
+        .hero-support {
+            font-size: 16.5px !important;
+            line-height: 1.65 !important;
+            color: #334155 !important;
+            margin-top: 14px !important;
+        }
+
+        .public-hero .btn {
+            font-size: 13.5px !important;
+            padding: 10px 22px !important;
+            font-weight: 750 !important;
+        }
+
+        .vision-quote blockquote {
+            font-size: 16.5px !important;
+            line-height: 1.55 !important;
+            font-family: 'Noto Serif', Georgia, serif !important;
+            color: #0a2540 !important;
+        }
+
+        .vision-label {
+            font-size: 13.5px !important;
+            font-weight: 750 !important;
+            color: #0a2540 !important;
+        }
+
+        .vision-tagline {
+            font-size: 12.5px !important;
+            line-height: 1.5 !important;
+            color: #475569 !important;
+        }
+
+        .vision-context {
+            font-size: 11px !important;
+            color: #64748b !important;
+        }
+
+        .homepage-statistics strong {
+            font-size: 28px !important;
+            font-weight: 800 !important;
+            color: #0a2540 !important;
+        }
+
+        .homepage-statistics span {
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            color: #1e293b !important;
+            margin-top: 4px !important;
+        }
+
+        .homepage-statistics small {
+            font-size: 11.5px !important;
+            color: #64748b !important;
+        }
+
+        .cpse-band h2 {
+            font-size: 14px !important;
+            font-weight: 750 !important;
+            color: #0a2540 !important;
+        }
+
+        .cpse-band p {
+            font-size: 11.5px !important;
+            color: #475569 !important;
+        }
+
+        .capability-section h2, .process-section h2, .information-section h2 {
+            font-size: 24px !important;
+            font-weight: 800 !important;
+            font-family: 'Noto Serif', Georgia, serif !important;
+            color: #0a2540 !important;
+        }
+
+        .eyebrow {
+            font-size: 11.5px !important;
+            font-weight: 800 !important;
+            letter-spacing: 0.8px !important;
+            color: #ea580c !important;
+        }
+
+        .capability-list h3 {
+            font-size: 17px !important;
+            font-weight: 750 !important;
+            color: #0a2540 !important;
+            margin-bottom: 8px !important;
+        }
+
+        .capability-list p, .information-section > p {
+            font-size: 14px !important;
+            line-height: 1.65 !important;
+            color: #334155 !important;
+        }
+
+        .section-number {
+            font-size: 15px !important;
+            font-weight: 800 !important;
+            color: #ea580c !important;
+        }
+
+        .process-rail h3 {
+            font-size: 14px !important;
+            font-weight: 750 !important;
+            color: #0a2540 !important;
+        }
+
+        .process-rail p {
+            font-size: 12px !important;
+            line-height: 1.4 !important;
+            color: #475569 !important;
+        }
+
+        .resource-links a, .information-section .text-link {
+            font-size: 13.5px !important;
+            font-weight: 600 !important;
+        }
+
+        .gov-footer {
+            font-size: 12.5px !important;
+        }
+
+        .gov-footer strong {
+            font-size: 13.5px !important;
+            font-weight: 750 !important;
+        }
+
+        .gov-footer a {
+            font-size: 12.5px !important;
+        }
+
+        .footer-bottom {
+            font-size: 11.5px !important;
+        }
+    </style>
 </head>
 <body class="public-shell ">
 
@@ -50,24 +248,26 @@
     <div class="public-nav-links">
       <a href="{% url 'home' %}" class="active">Home</a>
       <a href="{% url 'about' %}">About</a>
-      <a href="{% url 'comparator' %}">Material Harmonization</a>
-      <a href="{% url 'cad_matcher' %}">CAD 3D Matcher</a>
-      <a href="{% url 'material_transfer' %}">Inter-CPSE Transfer</a>
-      <a href="{% url 'savings' %}">Inventory Intelligence</a>
-      <a href="{% url 'procurement' %}">Procurement</a>
-      <a href="{% url 'review_workbench' %}">Officer Scrutiny</a>
-      <a href="{% url 'compliance' %}">Engineering Standards</a>
-      <a href="{% url 'multilingual' %}">Multilingual</a>
+      <a href="#platform">Material Harmonization</a>
+      <a href="#inventory-intelligence">Inventory Intelligence</a>
+      <a href="#procurement-overview">Procurement</a>
+      <a href="#public-governance">Governance</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
       <a class="nav-workspace" href="{% url 'dashboard' %}">Workspace &rarr;</a>
     </div>
-    <form class="nav-global-search" action="{% url 'search' %}" method="get" role="search" data-global-search>
+    <form class="nav-global-search" action="{% url 'search' %}" method="get" role="search" data-global-search data-suggest-url="{% url 'search' %}">
       <label class="sr-only" for="nav-search">Search materials, CPSEs and available records</label>
       <button type="submit" aria-label="Execute search">
         <svg class="outline-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/>
         </svg>
       </button>
-      <input id="nav-search" name="q" type="search" placeholder="Search materials, CPSEs, documents..." maxlength="200" autocomplete="off">
+      <input id="nav-search" name="q" type="search" placeholder="Search catalog, item code, CPSE..." maxlength="200" autocomplete="off" aria-controls="nav-search-suggestions" aria-expanded="false">
+      <div id="nav-search-suggestions" class="nav-search-suggestions" hidden>
+        <div data-search-results></div>
+        <p data-search-status role="status"></p>
+      </div>
     </form>
   </nav>
 </div>

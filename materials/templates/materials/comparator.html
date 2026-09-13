@@ -19,7 +19,7 @@
 <div class="page-header-row" style="margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1.5px solid #cbd5e1;">
     <div>
         <div class="page-kicker">
-            <span>⇄</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="8" x2="6" y2="8"/><polyline points="10 4 6 8 10 12"/><line x1="6" y1="16" x2="18" y2="16"/><polyline points="14 12 18 16 14 20"/></svg>
             <span>Specification Comparison &bull; Semantic &amp; Attribute Alignment</span>
         </div>
         <h1 class="page-title">Material Specification Comparator &amp; Verification</h1>
@@ -28,63 +28,63 @@
         </p>
     </div>
     <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px;">
-        <div style="background: #ffffff; border: 1.5px solid #cbd5e1; border-radius: 4px; padding: 6px 12px; font-size: 11px; font-weight: 700; color: #0a2540;">
-            ⚖ Rule-based verification &bull; Real-time attribute checking
+        <div style="background: #ffffff; border: 1px solid var(--gov-border); border-radius: 4px; padding: 6px 12px; font-size: 11px; font-weight: 600; color: var(--gov-navy-primary);">
+            Rule-based verification &bull; Real-time attribute checking
         </div>
     </div>
 </div>
 
-<!-- 3 HIGH-CONTRAST ONE-CLICK DEMO SCENARIOS -->
-<div class="card" style="border-top: 4px solid #0a2540; margin-bottom: 24px;">
-    <div style="padding: 12px 18px; background: #f1f5f9; border-bottom: 1.5px solid #cbd5e1; display: flex; align-items: center; justify-content: space-between;">
-        <div style="font-size: 11.5px; font-weight: 800; color: #0a2540; text-transform: uppercase; letter-spacing: 0.5px;">
+<!-- 3 NATURAL ONE-CLICK DEMO SCENARIOS -->
+<div class="card" style="border-top: 3px solid var(--gov-navy-primary); margin-bottom: 20px;">
+    <div style="padding: 11px 16px; background: #fafbfc; border-bottom: 1px solid var(--gov-border); display: flex; align-items: center; justify-content: space-between;">
+        <div style="font-size: 11.5px; font-weight: 700; color: var(--gov-navy-primary); text-transform: uppercase; letter-spacing: 0.5px;">
             Public Sector Benchmark Demonstrations &bull; Click to Load Instantly
         </div>
-        <span style="font-size: 10.5px; color: #475569; font-weight: 600;">Real public sector benchmark cases</span>
+        <span style="font-size: 10.5px; color: var(--gov-text-muted); font-weight: 500;">Real public sector benchmark cases</span>
     </div>
-    <div style="padding: 16px 18px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+    <div style="padding: 14px 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;">
         
         <!-- DEMO 1: IDENTICAL -->
-        <a href="{% url 'comparator' %}?demo=identical" style="text-decoration: none; display: flex; flex-direction: column; padding: 14px 16px; background: {% if selected_scenario == 'identical' %}#eff6ff{% else %}#ffffff{% endif %}; border: 2px solid {% if selected_scenario == 'identical' %}#1d4ed8{% else %}#cbd5e1{% endif %}; border-radius: 6px; transition: all 0.15s;">
-            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 8px;">
-                <span style="font-weight: 800; font-size: 12.5px; color: #0a2540;">Case 1: Identical Fasteners</span>
+        <a href="{% url 'comparator' %}?demo=identical" style="text-decoration: none; display: flex; flex-direction: column; padding: 12px 14px; background: {% if selected_scenario == 'identical' %}#f4f8fc{% else %}#ffffff{% endif %}; border: 1.5px solid {% if selected_scenario == 'identical' %}var(--gov-navy-primary){% else %}var(--gov-border){% endif %}; border-radius: 4px; transition: all 0.15s ease;">
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 6px;">
+                <span style="font-weight: 700; font-size: 12px; color: var(--gov-navy-primary);">Case 1: Identical Fasteners</span>
                 <span class="status-pill status-identical">100% Identity Match</span>
             </div>
-            <div style="font-size: 11px; color: #0f172a; font-weight: 600; line-height: 1.5; font-family: monospace; background: #f8fafc; padding: 6px 8px; border-radius: 4px; border: 1px solid #e2e8f0;">
+            <div style="font-size: 11px; color: var(--gov-text-dark); font-weight: 500; line-height: 1.45; font-family: monospace; background: #fafbfc; padding: 6px 8px; border-radius: 3px; border: 1px solid var(--gov-border);">
                 ONGC: HEX BOLT M10 X 50 SS304<br>
                 NTPC: HEXAGONAL BOLT M10 X 50 MM SS304
             </div>
-            <div style="font-size: 10.5px; color: #475569; margin-top: 8px; font-weight: 500;">
+            <div style="font-size: 10.5px; color: var(--gov-text-muted); margin-top: 6px; font-weight: 400;">
                 Different catalog notation normalized to ISO 4017 / DIN 933 standard.
             </div>
         </a>
 
         <!-- DEMO 2: EQUIVALENT -->
-        <a href="{% url 'comparator' %}?demo=equivalent" style="text-decoration: none; display: flex; flex-direction: column; padding: 14px 16px; background: {% if selected_scenario == 'equivalent' %}#eff6ff{% else %}#ffffff{% endif %}; border: 2px solid {% if selected_scenario == 'equivalent' %}#1d4ed8{% else %}#cbd5e1{% endif %}; border-radius: 6px; transition: all 0.15s;">
-            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 8px;">
-                <span style="font-weight: 800; font-size: 12.5px; color: #0a2540;">Case 2: Equivalent Process Valves</span>
+        <a href="{% url 'comparator' %}?demo=equivalent" style="text-decoration: none; display: flex; flex-direction: column; padding: 12px 14px; background: {% if selected_scenario == 'equivalent' %}#f4f8fc{% else %}#ffffff{% endif %}; border: 1.5px solid {% if selected_scenario == 'equivalent' %}#1d4ed8{% else %}var(--gov-border){% endif %}; border-radius: 4px; transition: all 0.15s ease;">
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 6px;">
+                <span style="font-weight: 700; font-size: 12px; color: var(--gov-navy-primary);">Case 2: Equivalent Process Valves</span>
                 <span class="status-pill status-equivalent">Technical Equivalent</span>
             </div>
-            <div style="font-size: 11px; color: #0f172a; font-weight: 600; line-height: 1.5; font-family: monospace; background: #f8fafc; padding: 6px 8px; border-radius: 4px; border: 1px solid #e2e8f0;">
+            <div style="font-size: 11px; color: var(--gov-text-dark); font-weight: 500; line-height: 1.45; font-family: monospace; background: #fafbfc; padding: 6px 8px; border-radius: 3px; border: 1px solid var(--gov-border);">
                 ONGC: 2 INCH FLANGED SS316 BALL VALVE 150# ANSI<br>
                 NTPC: BALL VALVE FLG 50MM 150LB SS 316 BODY
             </div>
-            <div style="font-size: 10.5px; color: #475569; margin-top: 8px; font-weight: 500;">
+            <div style="font-size: 10.5px; color: var(--gov-text-muted); margin-top: 6px; font-weight: 400;">
                 Imperial (2") and metric (50mm / DN50) units verified under ASME B16.34.
             </div>
         </a>
 
         <!-- DEMO 3: DIFFERENT -->
-        <a href="{% url 'comparator' %}?demo=different" style="text-decoration: none; display: flex; flex-direction: column; padding: 14px 16px; background: {% if selected_scenario == 'different' %}#fef2f2{% else %}#ffffff{% endif %}; border: 2px solid {% if selected_scenario == 'different' %}#dc2626{% else %}#cbd5e1{% endif %}; border-radius: 6px; transition: all 0.15s;">
-            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 8px;">
-                <span style="font-weight: 800; font-size: 12.5px; color: #0a2540;">Case 3: Critical Alloy Mismatch</span>
+        <a href="{% url 'comparator' %}?demo=different" style="text-decoration: none; display: flex; flex-direction: column; padding: 12px 14px; background: {% if selected_scenario == 'different' %}#fef6f6{% else %}#ffffff{% endif %}; border: 1.5px solid {% if selected_scenario == 'different' %}#b42318{% else %}var(--gov-border){% endif %}; border-radius: 4px; transition: all 0.15s ease;">
+            <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 6px;">
+                <span style="font-weight: 700; font-size: 12px; color: var(--gov-navy-primary);">Case 3: Critical Alloy Mismatch</span>
                 <span class="status-pill status-different">Blocked Mismatch</span>
             </div>
-            <div style="font-size: 11px; color: #0f172a; font-weight: 600; line-height: 1.5; font-family: monospace; background: #f8fafc; padding: 6px 8px; border-radius: 4px; border: 1px solid #e2e8f0;">
+            <div style="font-size: 11px; color: var(--gov-text-dark); font-weight: 500; line-height: 1.45; font-family: monospace; background: #fafbfc; padding: 6px 8px; border-radius: 3px; border: 1px solid var(--gov-border);">
                 ONGC: HEX BOLT M10 X 50 SS304<br>
                 BHEL: HEX BOLT M10 X 50 SS316
             </div>
-            <div style="font-size: 10.5px; color: #991b1b; margin-top: 8px; font-weight: 700;">
+            <div style="font-size: 10.5px; color: #991b1b; margin-top: 6px; font-weight: 600;">
                 Superficial text match (92%), but SS304 vs SS316 alloy mismatch prevents dangerous substitution.
             </div>
         </a>
@@ -281,8 +281,9 @@
                     Decision recorded permanently to the inter-CPSE audit trail under DPE Order 2026.
                 </div>
             </div>
-            <a href="{% url 'material_transfer' %}" class="btn btn-saffron" style="font-size: 11.5px; padding: 6px 14px;">
-                🚚 Route to Inter-CPSE Transfer &rarr;
+            <a href="{% url 'material_transfer' %}" class="btn btn-saffron" style="font-size: 11.5px; padding: 6px 14px; gap: 6px;">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <span>Route to Inter-CPSE Transfer &rarr;</span>
             </a>
         </div>
 
